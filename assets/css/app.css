@@ -1,8 +1,118 @@
-body {
-    background-color: rgb(206, 24, 24);
+html {
+    background-color: whitesmoke;
 }
 
 .lit {
+    padding: 30px;
+    /* border-bottom: 2px solid gray; */
+    background-color: white;
+}
+
+.main-content {
+    border: 1px solid red;
+    background-color: white;
+    margin: 10px 10%;
+    padding: 4%;
+}
+
+.levelVid {
+    border: 1px solid blue;
+    /* max-width: 100%; */
+    /* padding: 10px; */
+}
+
+.ytcon {
+    width: 100% !important;
+}
+
+
+.youtube-responsive-container {
+    width: 100%;
+}
+
+.vid {
+        /* position: relative;
+        height: auto; */
+        /* border: 1px solid purple; */
     padding: 10px;
-    border-bottom: 2px solid gray;
+    /* width: 49vw; */
+    /* max-width: 70vw !important; */
+    }
+
+@media only screen and (max-width: 768px) {
+    .vid {
+        width: 70vw;
+        max-width: 70vw;
+    }
+    .vidData { 
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .vid {
+        width: 70vw !important;
+    }
+    .vidData { 
+        max-width: 50vw;
+    }
+
+    .levelVid {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .vid {
+        /* width: 70vw !important; */
+        /* max-width: 60vw; */
+        /* width: 100%; */
+        border: 1px solid purple;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .vid {
+        width: 50vw !important;
+        max-width: 60vw;
+    }
+
+    .vidData {
+        width: 20vw;
+        /* max-width: 25vw; */
+    }
+
+    .levelVid {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 1336px) {
+    .levelVid {
+        display: flex !important;
+    }
+}
+
+.viditem {
+    width: 100% !important;
+}
+
+.vidData {
+    padding: 10px;
+    border: 1px solid pink;
+    /* width: 21vw; */
+    display: block;
+    /* width: 30%; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -1,4 +1,7 @@
 {
+    "alchemy/binary-driver": {
+        "version": "v5.2.0"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99"
     },
@@ -84,17 +87,29 @@
     "egulias/email-validator": {
         "version": "2.1.22"
     },
+    "evenement/evenement": {
+        "version": "v3.0.1"
+    },
     "monolog/monolog": {
         "version": "2.1.1"
     },
+    "neutron/temporary-filesystem": {
+        "version": "2.4"
+    },
     "nikic/php-parser": {
         "version": "v4.10.2"
+    },
+    "norkunas/youtube-dl-php": {
+        "version": "v1.6.0"
     },
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
     "php": {
         "version": "7.3"
+    },
+    "php-ffmpeg/php-ffmpeg": {
+        "version": "v0.16"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
@@ -506,7 +521,7 @@
         },
         "files": [
             "assets/app.js",
-            "assets/styles/app.css",
+            "assets/css/app.css",
             "config/packages/assets.yaml",
             "config/packages/prod/webpack_encore.yaml",
             "config/packages/test/webpack_encore.yaml",

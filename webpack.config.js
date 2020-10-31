@@ -13,7 +13,6 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
-
     /*
      * ENTRY CONFIG
      *
@@ -28,7 +27,7 @@ Encore
     //.addEntry('page2', './assets/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
-    .splitEntryChunks()
+    //.splitEntryChunks()
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
@@ -48,13 +47,15 @@ Encore
     .enableVersioning(Encore.isProduction())
 
     // enables @babel/preset-env polyfills
-    .configureBabelPresetEnv((config) => {
-        config.useBuiltIns = 'usage';
-        config.corejs = 3;
-    })
+    // .configureBabelPresetEnv((config) => {
+    //     config.useBuiltIns = 'usage';
+    //     config.corejs = 3;
+    // })
+    //.configureBabelPresetEnv()
 
     // enables Sass/SCSS support
     .enableSassLoader()
+
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -72,3 +73,17 @@ Encore
 ;
 
 module.exports = Encore.getWebpackConfig();
+
+// module.exports = {
+//     module: {
+//       rules: [
+//         {
+//             test: /\.(ogg|mp3|wav|mpe?g)$/i,
+//             loader: 'raw-loader',
+//             options: {
+//               name: '[path][name].[ext]'
+//             }
+//         },
+//       ],
+//     },
+//   };

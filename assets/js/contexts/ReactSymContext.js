@@ -1,21 +1,45 @@
-import React, {createContext } from 'react';
+import React, { createContext } from 'react';
+import axios from 'axios';
+
 export const ReactSymContext = createContext();
 
 class ReactSymContextProvider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            sounds: [{title: "Ik dacht dat dat kon"}, {title: "Lekker wijntje Leo"}],
+            sounds: [],
         };
+        //this.readSound();
     }
     //create
-    createSound() {
-
+    //sound = {title : title, transcriptie: transcriptie, image: thumbnail, mp3: filePath, spelers: [acteurs], video_id: id, start: start, end: end }
+    createSound(event, sound) {
+        event.preventDefault();
+        axios.post('/api/sound/create', sound)
+            .then(response => {
+                console.log(response.data);
+                // let data = [...this.state.sounds];
+                // data.push(response.data.sound);
+                // this.setState({
+                //     sounds: sound,
+                // });
+            }).catch(error => {
+                console.error(error);
+            })
     }
 
     //read
     readSound() {
-
+        //event.preventDefault();
+        //console.log(searchTerm);
+        axios.get('/api/sound/read')
+            .then(response => {
+                this.setState({
+                    sounds: response.data,
+                });
+            }).catch(error => {
+                console.error(error);
+            })
     }
 
     //update
